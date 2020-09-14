@@ -43,9 +43,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :notFound
 
     def create #method membuat user
         
-        Rails.logger.info("======================")
-        Rails.logger.info(user_params)
-        byebug
+       
         user_params[:users].each do |user_param|
             user = User.create(user_param)
         end
